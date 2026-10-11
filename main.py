@@ -30,7 +30,7 @@ def main(page: ft.Page):
     cities = ["Aşgabat", "Mary", "Lebap", "Daşoguz", "Balkanabat", "Ahal"]
     
     city_from = ft.Dropdown(
-        label="📍 Nireden", 
+        label="Nireden", 
         options=[ft.dropdown.Option(c) for c in cities], 
         bgcolor=PANEL_BG,
         border_color=ACCENT_BLUE,
