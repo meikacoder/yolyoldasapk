@@ -50,8 +50,16 @@ jobs:
         export PATH=$PATH:~/.local/bin
         buildozer android debug || cat .buildozer/android/platform/build.bionic.log || true
 
+    - name: List files to find APK
+      run: |
+        find . -name "*.apk"
+        ls -la bin/ || true
+
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
       with:
         name: yolyoldas-apk
-        path: bin/*.apk    
+        path: |
+          bin/*.apk
+          *.apk
+          build/*.apk
