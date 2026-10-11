@@ -48,7 +48,7 @@ jobs:
     - name: Build with Buildozer
       run: |
         export PATH=$PATH:~/.local/bin
-        buildozer -v android debug
+        yes | buildozer -v android debug
 
     - name: Find and Move APK
       run: |
