@@ -48,18 +48,16 @@ jobs:
     - name: Build with Buildozer
       run: |
         export PATH=$PATH:~/.local/bin
-        buildozer android debug || cat .buildozer/android/platform/build.bionic.log || true
+        buildozer -v android debug
 
-    - name: List files to find APK
+    - name: Find and Move APK
       run: |
-        find . -name "*.apk"
-        ls -la bin/ || true
+        mkdir -p final_apk
+        find . -name "*.apk" -exec cp {} final_apk/ \;
+        ls -la final_apk/
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
       with:
         name: yolyoldas-apk
-        path: |
-          bin/*.apk
-          *.apk
-          build/*.apk
+        path: final_apk/*.apk
