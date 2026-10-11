@@ -7,7 +7,7 @@ FIRESTORE_URL = f"https://firestore.googleapis.com/v1/projects/{tkmtaxi-a99f4}/d
 USERS_URL = f"https://firestore.googleapis.com/v1/projects/{tkmtaxi-a99f4}/databases/(default)/documents/users"
 
 def main(page: ft.Page):
-    page.title = "Ýolýoldaş — Şäherara Taksi"
+    page.title = "Ýolýoldaş — Şäherara Taksiler"
     page.theme_mode = ft.ThemeMode.DARK
     page.padding = 16
     page.scroll = ft.ScrollMode.AUTO
