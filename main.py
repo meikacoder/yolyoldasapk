@@ -2,10 +2,9 @@ import flet as ft
 import requests
 import json
 
-# Firebase Firestore Proýekt Salgysy
 PROJECT_ID = "tkmtaxi-a99f4"
-FIRESTORE_URL = f"https://firestore.googleapis.com/v1/projects/{PROJECT_ID}/databases/(default)/documents/rides"
-USERS_URL = f"https://firestore.googleapis.com/v1/projects/{PROJECT_ID}/databases/(default)/documents/users"
+FIRESTORE_URL = f"https://firestore.googleapis.com/v1/projects/{tkmtaxi-a99f4}/databases/(default)/documents/rides"
+USERS_URL = f"https://firestore.googleapis.com/v1/projects/{tkmtaxi-a99f4}/databases/(default)/documents/users"
 
 def main(page: ft.Page):
     page.title = "Ýolýoldaş — Şäherara Taksi"
@@ -305,5 +304,4 @@ def main(page: ft.Page):
     )
     
     load_rides()
-
 ft.app(target=main)
