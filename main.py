@@ -8,7 +8,7 @@ FIRESTORE_URL = f"https://firestore.googleapis.com/v1/projects/{PROJECT_ID}/data
 USERS_URL = f"https://firestore.googleapis.com/v1/projects/{PROJECT_ID}/databases/(default)/documents/users"
 
 def main(page: ft.Page):
-    page.title = "Ýolýoldaş — Şäherara Taksi (PRO)"
+    page.title = "Ýolýoldaş — Şäherara Taksi"
     page.theme_mode = ft.ThemeMode.DARK
     page.padding = 16
     page.scroll = ft.ScrollMode.AUTO
