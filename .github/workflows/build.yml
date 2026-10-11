@@ -10,25 +10,14 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.10'
 
-    - name: Set up Java
-      uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin'
-        java-version: '17'
-
-    - name: Install dependencies
-      run: |
-        pip install --upgrade pip
-        pip install buildozer cython flet
-
-    - name: Build with Buildozer
+    - name: Build with Buildozer Action
       uses: ArtemSBulgakov/buildozer-action@v1
       id: buildozer
       with:
