@@ -21,29 +21,14 @@ jobs:
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: '17'
+        java-version: '11'
 
-    - name: Install system dependencies
+    - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y \
-          python3-pip \
-          git \
-          zip \
-          unzip \
-          autoconf \
-          libtool \
-          pkg-config \
-          zlib1g-dev \
-          libncurses5-dev \
-          libncursesw5-dev \
-          libffi-dev \
-          libssl-dev
-
-    - name: Install Buildozer and Cython
-      run: |
+        sudo apt-get install -y zip unzip git libltdl-dev libffi-dev libssl-dev python3-pip
         pip install --upgrade pip
-        pip install --user Cython==0.29.36 buildozer flet requests
+        pip install Cython==0.29.33 buildozer flet requests
 
     - name: Build with Buildozer
       run: |
