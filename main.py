@@ -304,4 +304,9 @@ def main(page: ft.Page):
     )
     
     load_rides()
-ft.app(target=main)
+def main(page: ft.Page):
+    # Bu ýerde siziň esasy app kodyňyz bar
+    ...
+
+if __name__ == "__main__":
+    ft.app(target=main)
