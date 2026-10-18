@@ -3,8 +3,8 @@ import requests
 import json
 
 PROJECT_ID = "tkmtaxi-a99f4"
-FIRESTORE_URL = f"https://firestore.googleapis.com/v1/projects/{tkmtaxi-a99f4}/databases/(default)/documents/rides"
-USERS_URL = f"https://firestore.googleapis.com/v1/projects/{tkmtaxi-a99f4}/databases/(default)/documents/users"
+FIRESTORE_URL = f"https://firestore.googleapis.com/v1/projects/{PROJECT_ID}/databases/(default)/documents/rides"
+USERS_URL = f"https://firestore.googleapis.com/v1/projects/{PROJECT_ID}/databases/(default)/documents/users"
 
 def main(page: ft.Page):
     page.title = "Ýolýoldaş — Şäherara Taksiler"
