@@ -305,8 +305,9 @@ def main(page: ft.Page):
     
     load_rides()
 def main(page: ft.Page):
-    # Bu ýerde siziň esasy app kodyňyz bar
     ...
 
+from flet import app as run_flet_app
+
 if __name__ == "__main__":
-    ft.app(target=main)
+    run_flet_app(target=main)
